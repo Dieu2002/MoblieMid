@@ -1,7 +1,11 @@
 import * as React from 'react';
-import { View, ImageBackground, StyleSheet, Text } from 'react-native';
+import { View, ImageBackground, StyleSheet, Text, Button } from 'react-native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import Home from './Home';
+import Detail from './Detail';
 
-const Banner = () => {
+const Banner = ({ navigation }) => {
   return (
     <View>
       <View style={styles.banner}>
@@ -10,9 +14,15 @@ const Banner = () => {
             <Text style={styles.text}>Save extra on every order</Text>
             <Text style={styles.txt}>Etiam mollis metus non faucibus sollicitudin.</Text>
           </View>
+          <Button
+                    title="Go to detail"
+                    onPress={() => navigation.navigate('Detail')}/>
         </ImageBackground>
       </View>
-
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="DetailScreen" component={Detail} />
+      </Stack.Navigator>
     </View>
   );
 }

@@ -6,12 +6,16 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from './src/Home';
 import Banner from './src/Banner';
 import Profile from './src/Profile';
+import Test from './src/Test';
+import Detail from './src/Detail';
 
 
 const Tab = createBottomTabNavigator();
 
 function MyTabs() {
+
   return (
+    
     <Tab.Navigator>
       <Tab.Screen
         name="Home"
@@ -56,7 +60,7 @@ function MyTabs() {
       />
        <Tab.Screen
         name="Detail"
-        component={Profile}
+        component={Detail}
         options={{
           tabBarLabel: 'Detail',
           tabBarIcon: ({color, size}) => (

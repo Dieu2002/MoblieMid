@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { View, Text, StyleSheet, Image,FlatList, ScrollView} from "react-native";
 
 
-export default function Products() {
+export default function Products({ navigation }) {
   
   const [listProducts, setListProducts] = useState([
     {
@@ -56,6 +56,9 @@ export default function Products() {
             </View>
           }}>
           </FlatList>
+          <Button
+                    title="Go to detail"
+                    onPress={() => navigation.navigate('Detail')}/>
         </ScrollView>
       </View>
     </View>

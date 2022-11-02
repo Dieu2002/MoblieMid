@@ -9,7 +9,7 @@ export default function Profile(){
     return (
       <View style={styles.container}>
           <View style={styles.header}></View>
-          <Image style={styles.avatar} source={{uri: './image/be.png'}}/>
+          <Image style={styles.avatar} source={{uri: 'https://bootdey.com/img/Content/avatar/avatar6.png'}}/>
           <View style={styles.body}>
             <View style={styles.bodyContent}>
               <Text style={styles.name}>John Doe</Text>
@@ -23,7 +23,7 @@ export default function Profile(){
 
 
 
-  const styles = StyleSheet.create({
+const styles = StyleSheet.create({
     header:{
       backgroundColor: "#00BFFF",
       height:200,
@@ -45,7 +45,7 @@ export default function Profile(){
       fontWeight:'600',
     },
     body:{
-      marginTop:40,
+      // marginTop:40,
     },
     bodyContent: {
       flex: 1,
@@ -79,4 +79,4 @@ export default function Profile(){
       borderRadius:30,
       backgroundColor: "#00BFFF",
     },
-  });
+});
